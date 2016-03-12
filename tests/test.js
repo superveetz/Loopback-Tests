@@ -8,7 +8,7 @@ describe('State1Ctrl', function () {
     
     inject(function ($injector) {
       $rootScope = $injector.get('$rootScope');
-      $scope = $rootScope.new();
+      $scope = $rootScope.$new();
       controller = $injector.get('$controller')('State1Ctrl', { $scope: $scope } );
     });
   });
