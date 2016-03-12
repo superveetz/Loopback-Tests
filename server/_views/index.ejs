@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="./bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+    <script src="./app.js"></script>
+
+  </head>
+  <body>
+    <h1>EJS + Angular</h1>
+
+    <script>
+      var cdn = "http://s3.amazon.com";
+    </script>
+
+    <main>
+      <div ui-view="state1"></div>
+    </main>
+  </body>
+</html>
