@@ -4,6 +4,12 @@
   angular.module('app', [
     'ui.router'
   ])
+  
+  .controller('State1Ctrl', ['$scope', function($scope) {
+    console.log('cdn2', cdn);
+    $scope.test = 'hi';
+    console.log($scope.test);
+  }])
 
   .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
      // For any unmatched url, redirect to /state1
@@ -16,7 +22,8 @@
   $stateProvider
     .state('state1', {
       url: "/state1",
-      templateUrl: "views/state1.html"
+      templateUrl: cdn + "views/state1.html",
+      controller: 'State1Ctrl'
     })
     .state('state1.list', {
       url: "/list",
